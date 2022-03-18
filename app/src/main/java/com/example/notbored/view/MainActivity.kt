@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnStart.setOnClickListener {
-
+            val intentToActivities = Intent(this, CategoriesActivity::class.java)
+            startActivity(intentToActivities)
         }
     }
 }
