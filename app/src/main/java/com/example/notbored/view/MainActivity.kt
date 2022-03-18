@@ -1,12 +1,26 @@
 package com.example.notbored.view
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import com.example.notbored.R
+import androidx.appcompat.app.AppCompatActivity
+import com.example.notbored.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.tvTermsAndConditions.setOnClickListener {
+            val intentToTermsAndConditions = Intent(this, TermsAndConditionsActivity::class.java)
+            startActivity(intentToTermsAndConditions)
+        }
+
+        binding.btnStart.setOnClickListener {
+
+        }
     }
 }
