@@ -1,4 +1,4 @@
-package com.example.notbored
+package com.example.notbored.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
