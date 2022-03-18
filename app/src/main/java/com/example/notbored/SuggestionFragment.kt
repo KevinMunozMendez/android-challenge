@@ -5,17 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.notbored.databinding.FragmentFuggestionBinding
+import com.example.notbored.databinding.FragmentSuggestionBinding
 
-class FuggestionFragment : Fragment() {
+class SuggestionFragment : Fragment() {
 
-    private lateinit var mBinding: FragmentFuggestionBinding
+    private lateinit var mBinding: FragmentSuggestionBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        mBinding = FragmentFuggestionBinding.inflate(inflater,container,false)
+        mBinding = FragmentSuggestionBinding.inflate(inflater,container,false)
         return mBinding.root
     }
 
