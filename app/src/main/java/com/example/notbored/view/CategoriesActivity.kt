@@ -26,7 +26,7 @@ class CategoriesActivity : AppCompatActivity() {
     private fun setUpRecyclerView(){
         binding.rvActivities.setHasFixedSize(true)
         binding.rvActivities.layoutManager = LinearLayoutManager(this)
-        mAdapter.RecyclerAdapter(getCategories())
+        mAdapter.RecyclerAdapter(getCategories(), this)
         binding.rvActivities.adapter = mAdapter
     }
 

@@ -18,17 +18,10 @@ class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     private val binding = ItemActivityBinding.bind(view)
 
-    fun bind(categories: Categories) {
-        probando(categories)
+    fun bind(categories: Categories, context: Context) {
         binding.tvName.text = categories.activity
-    }
-
-    fun probando(categories: Categories) {
-
         binding.itemView.setOnClickListener {
-            Snackbar.make(binding.root, categories.activity, Snackbar.LENGTH_SHORT).show()
+            context.startActivity(Intent(context, SuggestionActivity::class.java))
         }
     }
-
-
 }
