@@ -3,15 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/NotBored/app/src/main/res/layout/activity_categories.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/NotBored/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/NotBored/app/src/main/res/layout/activity_suggestion.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/NotBored/app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/NotBored/app/src/main/res/layout/fragment_fuggestion.xml" value="0.33" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/NotBored/app/src/main/res/layout/fragment_suggestion.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/NotBored/app/src/main/res/layout/item_activity.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/NotBored/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3465" />
-        <entry key="app/src/main/res/drawable/close.xml" value="0.2745" />
-        <entry key="app/src/main/res/layout/activity_categories.xml" value="0.31567028985507245" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.31567028985507245" />
-        <entry key="app/src/main/res/layout/activity_terms_and_conditions.xml" value="0.23229166666666667" />
-        <entry key="app/src/main/res/layout/item_activity.xml" value="0.23229166666666667" />
-        <entry key="app/src/main/res/menu/menu_appbar.xml" value="0.4244791666666667" />
       </map>
     </option>
   </component>
