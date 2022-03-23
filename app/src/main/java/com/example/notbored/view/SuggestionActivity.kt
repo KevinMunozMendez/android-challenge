@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.notbored.R
 import com.example.notbored.common.ActivitiesService
 import com.example.notbored.common.entities.ActivityEntity
 import com.example.notbored.databinding.ActivitySuggestionBinding
@@ -57,10 +58,10 @@ class SuggestionActivity : AppCompatActivity() {
 
         val price = (activity.price) * 10
         when(price.toInt()) {
-            0 -> binding.tvPrice.text = "Free"
-            in 1..3 -> binding.tvPrice.text = "Low"
-            in 4..6 -> binding.tvPrice.text = "Medium"
-            else -> binding.tvPrice.text = "High"
+            0 -> binding.tvPrice.text = getString(R.string.Free)
+            in 1..3 -> binding.tvPrice.text = getString(R.string.Low)
+            in 4..6 -> binding.tvPrice.text = getString(R.string.Medium)
+            else -> binding.tvPrice.text = getString(R.string.High)
 
         }
 
