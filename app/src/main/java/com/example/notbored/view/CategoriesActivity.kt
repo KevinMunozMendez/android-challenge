@@ -1,5 +1,6 @@
 package com.example.notbored.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -22,9 +23,14 @@ class CategoriesActivity : AppCompatActivity(){
     }
 
     private fun setUpRecyclerView(){
+
+        val objectIntent = intent
+        val participants = objectIntent.getStringExtra("participants")
         binding.rvActivities.setHasFixedSize(true)
         binding.rvActivities.layoutManager = LinearLayoutManager(this)
-        mAdapter.RecyclerAdapter(getCategories())
+        participants?.let {
+            mAdapter.RecyclerAdapter(getCategories(), this, it)
+        }
         binding.rvActivities.adapter = mAdapter
     }
 

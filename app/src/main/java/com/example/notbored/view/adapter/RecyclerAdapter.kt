@@ -18,10 +18,13 @@ import com.google.android.material.snackbar.Snackbar
 class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>(){
 
     var categories: MutableList<Categories> = ArrayList()
+    private lateinit var participants: String
     private lateinit var context: Context
 
-    fun RecyclerAdapter(categories: MutableList<Categories>) {
+    fun RecyclerAdapter(categories: MutableList<Categories>, context: Context, participants: String) {
         this.categories = categories
+        this.context = context
+        this.participants = participants
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,7 +34,7 @@ class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>(){
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = categories[position]
-        holder.bind(item, context)
+        holder.bind(item, context, participants)
     }
 
     override fun getItemCount(): Int {
