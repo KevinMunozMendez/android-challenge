@@ -1,16 +1,14 @@
 package com.example.notbored.view
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notbored.databinding.ActivityCategoriesBinding
 import com.example.notbored.view.adapter.RecyclerAdapter
 import com.google.android.material.snackbar.Snackbar
 
-class CategoriesActivity : AppCompatActivity() {
+class CategoriesActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityCategoriesBinding
     private val mAdapter : RecyclerAdapter = RecyclerAdapter()

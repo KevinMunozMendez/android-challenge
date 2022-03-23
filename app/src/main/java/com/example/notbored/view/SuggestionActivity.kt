@@ -19,11 +19,11 @@ class SuggestionActivity : AppCompatActivity() {
         binding = ActivitySuggestionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mMainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
-
-        mMainViewModel.setSuggestion()
-        mMainViewModel.getSuggestion.observe(this) {
-            Log.i("a verr que pasa", it.toString())
-        }
+//        mMainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+//
+//        mMainViewModel.setSuggestion()
+//        mMainViewModel.getSuggestion.observe(this) {
+//            Log.i("a verr que pasa", it.toString())
+//        }
     }
 }

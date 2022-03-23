@@ -9,6 +9,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notbored.R
+import com.example.notbored.databinding.ItemActivityBinding
 import com.example.notbored.view.Categories
 import com.example.notbored.view.SuggestionActivity
 import com.example.notbored.view.adapter.ViewHolder
@@ -17,6 +18,7 @@ import com.google.android.material.snackbar.Snackbar
 class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>(){
 
     var categories: MutableList<Categories> = ArrayList()
+    private lateinit var context: Context
 
     fun RecyclerAdapter(categories: MutableList<Categories>) {
         this.categories = categories
@@ -29,11 +31,12 @@ class RecyclerAdapter : RecyclerView.Adapter<ViewHolder>(){
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = categories[position]
-        holder.bind(item)
+        holder.bind(item, context)
     }
 
     override fun getItemCount(): Int {
         return categories.size
     }
+
 
 }
