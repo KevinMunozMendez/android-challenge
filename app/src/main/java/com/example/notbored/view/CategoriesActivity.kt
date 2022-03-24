@@ -5,27 +5,42 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.notbored.R
 import com.example.notbored.databinding.ActivityCategoriesBinding
 import com.example.notbored.view.adapter.RecyclerAdapter
 import com.google.android.material.snackbar.Snackbar
 
-class CategoriesActivity : AppCompatActivity(){
+class CategoriesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCategoriesBinding
-    private val mAdapter : RecyclerAdapter = RecyclerAdapter()
+    private val mAdapter: RecyclerAdapter = RecyclerAdapter()
+    private var participants = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoriesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val objectIntent = intent
+        participants = objectIntent.getStringExtra("participants").toString()
+
         setUpRecyclerView()
+
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.btnRandom -> {
+                    startActivity(
+                        Intent(this, SuggestionActivity::class.java)
+                            .putExtra("participants", participants)
+                    )
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
-    private fun setUpRecyclerView(){
-
-        val objectIntent = intent
-        val participants = objectIntent.getStringExtra("participants")
+    private fun setUpRecyclerView() {
         binding.rvActivities.setHasFixedSize(true)
         binding.rvActivities.layoutManager = LinearLayoutManager(this)
         participants?.let {

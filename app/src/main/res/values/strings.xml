@@ -17,4 +17,6 @@ Nisl pulvinar taciti tellus diam quam dictum cursus potenti euismod natoque feug
     <string name="previous">Previous</string>
     <string name="next_image">next image</string>
     <string name="activities">Activities</string>
+    <string name="price">Price</string>
+    <string name="try_another">Try Another</string>
 </resources>
