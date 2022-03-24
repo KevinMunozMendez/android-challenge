@@ -30,13 +30,13 @@ class SuggestionActivity : AppCompatActivity() {
         }
 
         binding.btnTryAnother.setOnClickListener {
-            setupViewModel()
+            setupInfo()
         }
 
-        setupViewModel()
+        setupInfo()
     }
 
-    private fun setupViewModel() {
+    private fun setupInfo() {
         val objectIntent = intent
         val participants = objectIntent.getStringExtra("participants")
         val type = objectIntent.getStringExtra("type")
@@ -55,10 +55,10 @@ class SuggestionActivity : AppCompatActivity() {
         }
     }
 
-    fun activityResult(endpoint: String) {
+    private fun activityResult(endpoint: String) {
         lifecycleScope.launch {
             try {
-                setUi(getContacts(endpoint))
+                setUi(getApi(endpoint))
             } catch (e: Exception) {
                 e.printStackTrace()
                 error()
@@ -66,7 +66,7 @@ class SuggestionActivity : AppCompatActivity() {
         }
     }
 
-    private suspend fun getContacts(endpoint: String): ActivityEntity = withContext(Dispatchers.IO) {
+    private suspend fun getApi(endpoint: String): ActivityEntity = withContext(Dispatchers.IO) {
             val retrofit: Retrofit = Retrofit.Builder()
                 .baseUrl("https://www.boredapi.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
