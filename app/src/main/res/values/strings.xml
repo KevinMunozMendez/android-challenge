@@ -21,4 +21,8 @@ Nisl pulvinar taciti tellus diam quam dictum cursus potenti euismod natoque feug
     <string name="Low">Low</string>
     <string name="Medium">Medium</string>
     <string name="High">High</string>
+    <string name="price">Price</string>
+    <string name="try_another">Try Another</string>
+    <string name="errorActivity">No activity found with the specified parameters</string>
+
 </resources>

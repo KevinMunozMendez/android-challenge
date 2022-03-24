@@ -18,10 +18,9 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
             style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            app:navigationIcon="@drawable/back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:menu="@menu/menu_appbar"
-            app:title="Sugerencias"
             app:titleCentered="true" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -44,7 +43,8 @@
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/imgUser"
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            tools:text="Participants"
+            android:text="@string/participants"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@id/imgUser"
             app:layout_constraintTop_toTopOf="@id/imgUser"
@@ -88,7 +88,8 @@
         app:layout_constraintTop_toBottomOf="@id/clParticipants"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/imgMoney"
@@ -104,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            tools:text="Price"
+            android:text="@string/price"
             android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@id/imgMoney"
             app:layout_constraintTop_toTopOf="@id/imgMoney"
@@ -125,6 +126,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -157,12 +159,22 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
+        android:id="@+id/btnTryAnother"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Try Another"
+        android:text="@string/try_another"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="16dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
