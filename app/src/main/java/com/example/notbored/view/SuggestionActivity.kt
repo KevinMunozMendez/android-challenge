@@ -77,18 +77,19 @@ class SuggestionActivity : AppCompatActivity() {
 
     private fun setUi(activity: ActivityEntity) {
 
+        Log.i("holaaaa", activity.toString())
+
         binding.progressBar.visibility = View.GONE
         binding.clParticipants.visibility = View.VISIBLE
         binding.clPrice.visibility = View.VISIBLE
 
         val price = (activity.price) * 10
 
-        when(price.toInt()) {
-            0 -> binding.tvPrice.text = getString(R.string.Free)
-            in 1..3 -> binding.tvPrice.text = getString(R.string.Low)
-            in 4..6 -> binding.tvPrice.text = getString(R.string.Medium)
+        when {
+            price == 0F -> binding.tvPrice.text = getString(R.string.Free)
+            price < 3 -> binding.tvPrice.text = getString(R.string.Low)
+            price < 6 -> binding.tvPrice.text = getString(R.string.Medium)
             else -> binding.tvPrice.text = getString(R.string.High)
-
         }
 
         binding.title.text = activity.activity
